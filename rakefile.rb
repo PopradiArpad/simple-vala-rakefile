@@ -221,15 +221,15 @@ class Build
     PKGS		= ""
 
     # The path to the pkgconfig data. E.g.
-    #   /home/youuser/installed/lib/pkgconfig
-    PKGCONFIGPATH = "/home/arpad/installed/lib/pkgconfig"
+    #   /home/user/installed/lib/pkgconfig
+    PKGCONFIGPATH = ""
 
     # The vala compiler.
-    VALAC		= "/home/arpad/installed/bin/valac"
+    VALAC		= "/usr/bin/valac"
 
     # Add any additional flags to pass to the vala compiler. E.g.
     #   --vapidir=vala_install_dir/share/vala/vapi -g 
-    VALAFLAGS	= "--vapidir=/home/arpad/installed/share/vala/vapi -g "
+    VALAFLAGS	= ""
 
     # Set the C compiler.
     CC			= "gcc"
