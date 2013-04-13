@@ -1,0 +1,15 @@
+#build rules for a simple vala project
+#
+#contact:popradi.arpad11@gmail.com
+#
+#doku
+#https://live.gnome.org/Vala/Documentation/ParallelBuilds
+#https://github.com/jimweirich/rake/blob/master/doc/rakefile.rdoc
+#
+#multitask doesnt work really, rake must be run as
+#rake -m -j number_of_cores
+#to parallelize the build
+#
+#Before use you must adapt the configurations of
+#ProjectFileStructure and Build to your project file structure and build environment.
+
