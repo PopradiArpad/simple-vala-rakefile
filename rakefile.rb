@@ -295,7 +295,8 @@ class Build
 
     def link(file_name, o_files)
         puts "GEN #{file_name}"
-        sh "#{CC} -o #{file_name} #{OFLAGS} #{o_files} #{PKG_LIBS}"
+        #it's essential to have the OFLAGS after the o_files because the object order must follow the dependecy order!
+        sh "#{CC} -o #{file_name} #{o_files} #{OFLAGS} #{PKG_LIBS}"
     end #link
     
 end #Build
@@ -321,6 +322,11 @@ end
 desc "removing generated directories"
 task :clean do
     $pfs.all_generated_dirs.each {|d| sh "rm -rf #{d}"}
+end
+
+task :rebuild do
+    sh "rake clean"
+    sh "rake build"
 end
 
 desc "linking $pfs.production_executable"
